@@ -45,7 +45,7 @@ int main() {
 	}
 	printf("\n\n");
 
-	Node * delNextNode;
+	Node * delNextNode = NULL;
 	while (head != NULL) {
 		delNextNode = head->next;
 		free(head);

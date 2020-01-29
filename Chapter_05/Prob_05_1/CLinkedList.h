@@ -8,7 +8,7 @@
 
 typedef struct _employee {
 	int ID;
-	char * name;
+	char name[MAX_LEN];
 } Employee;
 
 typedef Employee * Data;

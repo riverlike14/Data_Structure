@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "CLinkedList.h"
 
 int main() {
@@ -12,23 +13,23 @@ int main() {
 
 	data = (Data)malloc(sizeof(Employee));
 	data->ID = 10773;
-	data->name = "3Jason";
+	strcpy(data->name, "3Jason");
 	LInsert(&list, data);
 	data = (Data)malloc(sizeof(Employee));
 	data->ID = 10774;
-	data->name = "4Jason";
+	strcpy(data->name, "4Jason");
 	LInsert(&list, data);
 	data = (Data)malloc(sizeof(Employee));
 	data->ID = 10775;
-	data->name = "5Jason";
+	strcpy(data->name, "5Jason");
 	LInsert(&list, data);
 	data = (Data)malloc(sizeof(Employee));
 	data->ID = 10771;
-	data->name = "1Jason";
+	strcpy(data->name, "1Jason");
 	LInsert(&list, data);
 	data = (Data)malloc(sizeof(Employee));
 	data->ID = 10772;
-	data->name = "2Jason";
+	strcpy(data->name, "2Jason");
 	LInsert(&list, data);
 
 	LPrint(&list);

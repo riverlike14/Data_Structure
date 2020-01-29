@@ -14,9 +14,9 @@ The following chapters are main topic that the book covers.
 2. Recursion
 3. Linked List 1 (Done)
 4. Linked List 2 (Done)
-5. Linked List 3 (Working on)
+5. Linked List 3 (Currently working on)
 6. Stack
-7. Queue (Working on)
+7. Queue (Currently working on)
 8. Tree
 9. Priority Queue and Heap
 10. Sorting

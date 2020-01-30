@@ -24,17 +24,27 @@ int main() {
 				break;
 			}
 		}
+	}
 
-		printf("From right to left: ");
+	if (LFirst(&list, &data)) {
+		while (TRUE) {
+			if (data % 2 == 0)
+				LRemove(&list);
+
+			if (!LNext(&list, &data))
+				break;
+		}
+	}
+
+	if (LFirst(&list, &data)) {
+		printf("From left to right: ");
 		while (TRUE) {
 			printf("%d ", data);
-			if (!LPrevious(&list, &data)) {
+			if (!LNext(&list, &data)) {
 				printf("\n");
 				break;
 			}
 		}
-
-		printf("\n");
 	}
 
 	return 0;

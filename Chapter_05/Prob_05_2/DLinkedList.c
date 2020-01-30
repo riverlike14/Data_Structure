@@ -3,39 +3,44 @@
 #include "DLinkedList.h"
 
 void ListInit(List * plist) {
-	plist->head = NULL;
+	plist->head = (Node*)malloc(sizeof(Node));
+	plist->tail = (Node*)malloc(sizeof(Node));
+
+	plist->head->prev = NULL;
+	plist->head->next = plist->tail;
+	plist->tail->prev = plist->head;
+	plist->tail->next = NULL;
+
 	plist->cur = NULL;
 	plist->numOfData = 0;
 }
 
 void LInsert(List * plist, Data data) {
 	Node * newNode = (Node*)malloc(sizeof(Node));
-	newNode->prev = NULL;
 	newNode->data = data;
 
-	if (plist->numOfData)
-		plist->head->prev = newNode;
-	newNode->next = plist->head;
-
-	plist->head = newNode;
+	newNode->prev = plist->tail->prev;
+	newNode->next = plist->tail;
+	plist->tail->prev->next = newNode;
+	plist->tail->prev = newNode;
 
 	(plist->numOfData)++;
 }
 
 int LFirst(List * plist, Data * pdata) {
-	if (plist->head == NULL)
+	if (plist->numOfData == 0)
 		return FALSE;
 
-	plist->cur = plist->head;
+	plist->cur = plist->head->next;
 	*pdata = plist->cur->data;
 
 	return TRUE;
 }
 
 int LNext(List * plist, Data * pdata) {
-	if (plist->cur == NULL)
+	if (plist->numOfData == 0)
 		return FALSE;
-	if (plist->cur->next == NULL)
+	if (plist->cur->next == plist->tail)
 		return FALSE;
 
 	plist->cur = plist->cur->next;
@@ -44,16 +49,28 @@ int LNext(List * plist, Data * pdata) {
 	return TRUE;
 }
 
-int LPrevious(List * plist, Data * pdata) {
-	if (plist->cur == NULL)
-		return FALSE;
-	if (plist->cur->prev == NULL)
-		return FALSE;
+Data LRemove(List * plist) {
+	if (plist->numOfData == 0) {
+		printf("Doubly Linked List Memory Error!\n");
+		exit(-1);
+	}
+	if (plist->cur == plist->head) {
+		printf("Doubly Linked List Memory Error!\n");
+		exit(-1);
+	}
 
+	Node * delNode = plist->cur;
+	Data rdata = delNode->data;
+
+	plist->cur->prev->next = plist->cur->next;
+	plist->cur->next->prev = plist->cur->prev;
 	plist->cur = plist->cur->prev;
-	*pdata = plist->cur->data;
 
-	return TRUE;
+	free(delNode);
+
+	(plist->numOfData)--;
+
+	return rdata;
 }
 
 int LCount(List * plist) {

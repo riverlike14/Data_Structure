@@ -12,12 +12,12 @@ The following chapters are main topic that the book covers.
 
 1. Basic knowledge on data structure and algorithm
 2. Recursion
-3. Linked List 1 (Done)
-4. Linked List 2 (Done)
-5. Linked List 3 (Done)
-6. Stack (Done)
+3. Linked List 1 (Complete)
+4. Linked List 2 (Complete)
+5. Linked List 3 (Complete)
+6. Stack (Complete)
 7. Queue (Currently working on 7-4)
-8. Tree
+8. Tree (Currently working on 8-2)
 9. Priority Queue and Heap
 10. Sorting
 11. Search 1

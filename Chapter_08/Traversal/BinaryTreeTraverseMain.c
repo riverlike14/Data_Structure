@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "BinaryTree.h"
 
-void ShowSqaureData(int data);
+void ShowSquareData(int data);
 
 int main() {
 	BTreeNode * bt1 = MakeBTreeNode();
@@ -24,17 +24,17 @@ int main() {
 	MakeRightSubTree(bt2, bt5);
 	MakeRightSubTree(bt3, bt6);
 
-	PreorderTraverse(bt1, ShowSqaureData);
+	PreorderTraverse(bt1, ShowSquareData);
 	printf("\n");
-	InorderTraverse(bt1, ShowSqaureData);
+	InorderTraverse(bt1, ShowSquareData);
 	printf("\n");
-	PostorderTraverse(bt1, ShowSqaureData);
+	PostorderTraverse(bt1, ShowSquareData);
 	printf("\n");
 
 	return 0;
 }
 
-void ShowSqaureData(int data) {
+void ShowSquareData(int data) {
 	printf("%d ", data * data);
 
 }

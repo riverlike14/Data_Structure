@@ -17,7 +17,7 @@ The following chapters are main topic that the book covers.
 5. Linked List 3 (Complete)
 6. Stack (Complete)
 7. Queue (Complete)
-8. Tree (Currently working on problem 8-2)
+8. Tree (Complete)
 9. Priority Queue and Heap
 10. Sorting
 11. Search 1

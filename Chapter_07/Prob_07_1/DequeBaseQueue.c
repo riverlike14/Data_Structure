@@ -19,5 +19,5 @@ Data Dequeue(Queue * pq) {
 }
 
 Data QPeek(Queue * pq) {
-	return DQGetLast(pq);
+	return DQGetFirst(pq);
 }

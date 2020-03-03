@@ -19,7 +19,7 @@ The following chapters are main topic that the book covers.
 7. Queue (Complete)
 8. Tree (Complete)
 9. Priority Queue and Heap (Complete)
-10. Sorting
+10. Sorting (Currently working on...)
 11. Search 1
 12. Search 2
 13. Table and Hash
